@@ -1,0 +1,63 @@
+
+{% block body %}
+    <div class="container">
+        <h1>Contact</h1>
+        {#
+          formulaire
+                    form_start : <form>
+                    form_end : </form>
+                    form_label : <label>
+                    form_widget : champ
+                    form_errors : erreur
+                    nécessaire de créer le bouton submit
+                    variable form : provient  du controleur
+                    nom des champs provient de la classe des formulaires Form/....Type
+
+                    attr: attribut  HTML
+        #}
+
+        {{ form_errors(form.firstname) }}
+        {{ form_errors(form.lastname) }}
+        {{ form_errors(form.email) }}
+        {{ form_errors(form.message) }}
+
+        {{ form_start(form, {'attr' : {'novalidate' : 'novalidate'}} ) }}
+        <p>
+            {{ form_label(form.firstname, 'Prenom :') }}
+            {{ form_widget(form.firstname) }}
+        </p>
+
+        <p>
+            {{ form_label(form.lastname, 'Nom :') }}
+            {{ form_widget(form.lastname) }}
+        </p>
+
+        <p>
+            {{ form_label(form.email, 'Email :') }}
+            {{ form_widget(form.email) }}
+        </p>
+
+        <p>
+            {{ form_label(form.message, 'Message :') }}
+            {{ form_widget(form.message) }}
+        </p>
+
+        <p>
+            {{ form_label(form.hobbies, 'Loisirs :') }}
+            {{ form_widget(form.hobbies) }}
+        </p>
+
+        <p>
+            {{ form_label(form.operatingSystem, "Système d'exploitation :") }}
+            {{ form_widget(form.operatingSystem) }}
+        </p>
+
+        <p>
+            <input type="submit" value="Envoyer">
+        </p>
+
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
+

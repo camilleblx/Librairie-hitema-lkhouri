@@ -1,0 +1,16 @@
+
+{% block body %}
+    <div class="container">
+        <h1>Modules</h1>
+
+        <h1> {{ results.Formation }}</h1>
+
+        {% for value in results.module %}
+
+            <tr>
+                <td>{{ value.module }}</td>
+            </tr>
+
+        {% endfor %}
+    </div>
+{% endblock %}

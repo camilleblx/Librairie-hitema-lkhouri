@@ -1,0 +1,32 @@
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Formation</h1>
+
+            {#
+                app : variable globale donnat accès à des informations de l'application
+                flashes(clé) : raccourci pour accéder aux messages flash de la session
+            #}
+
+
+            <table class="table table-striped">
+                {% for value in results %}
+
+                    <tr>
+                        <td>{{ value.Formation }}</td>
+
+                        <td>
+                            <a href="{{ url('courses.modules', { 'slug' : value.slug}) }}" class="btn btn-warning">Voir les modules</a>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+
+            </table>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

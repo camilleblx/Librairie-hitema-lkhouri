@@ -1,0 +1,18 @@
+{# lien : utiliser le name des routes - @Routes ("/URL", name="NOM UNIQUE"#}
+
+<img src="{{ asset('img/logo.png') }}" alt="">
+
+<p><a href="{{ url('homepage') }}">Accueil</a></p>
+<p><a href="{{ url('hello', { 'name' : 'Hitema' }) }}">Hello Hitema</a></p>
+
+
+
+
+
+    {% set meteo = 'soleil' %}
+
+    {% if meteo == 'soleil' %}
+        <p>Soleil</p>
+    {% else %}
+        <p>Nuage</p>
+    {% endif %}

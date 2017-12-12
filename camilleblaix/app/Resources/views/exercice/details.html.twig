@@ -1,0 +1,7 @@
+
+        {% block body %}
+            <p>
+                <h1>Détails de {{ details.nom ~ ' ' ~ details.prenom }}</h1>
+            <img src="{{ asset('img/' ~ details.image) }}">
+            </p>
+        {% endblock %}

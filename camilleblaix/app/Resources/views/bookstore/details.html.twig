@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-home"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1> {{ results.livres }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+
+                <img src={{ results.image }}alt="cover" class="img-fluid card-img-left" />
+                <div class="card-body">
+                    <p><strong class="text-uppercase">Auteur : </strong>{{ results.auteur }}</p>
+                    <p><strong class="text-uppercase">Description : </strong>{{ results.description }}</p>
+
+                        <p><strong class="text-uppercase">Categorie :</strong></p>
+
+                    <p><strong class="text-uppercase">Date de publication : </strong>{{ results.datepublication }}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
